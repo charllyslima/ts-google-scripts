@@ -1,0 +1,36 @@
+{
+  "name": "ts-google-scripts",
+  "version": "0.0.1",
+  "main": "src/main.ts",
+  "type": "module",
+  "scripts": {
+    "clean": "rm -rf dist/*.js",
+    "build": "npm run clean && rollup -c",
+    "login": "clasp login",
+    "publish": "clasp push"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/charllyslima/ts-google-scripts.git"
+  },
+  "author": "Charllys de Lima",
+  "license": "mit",
+  "bugs": {
+    "url": "https://github.com/charllyslima/ts-google-scripts/issues"
+  },
+  "homepage": "https://github.com/charllyslima/ts-google-scripts#readme",
+  "description": "",
+  "devDependencies": {
+    "@babel/core": "^7.24.7",
+    "@babel/plugin-transform-class-properties": "^7.24.7",
+    "@babel/preset-env": "^7.24.7",
+    "@google/clasp": "^2.4.2",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/google-apps-script": "^1.0.83",
+    "rollup": "^4.18.0",
+    "typescript": "^5.5.3"
+  }
+}
