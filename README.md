@@ -3,6 +3,11 @@
 Este repositório é um molde para utilizar TypeScript em operações com Google Scripts, permitindo gerenciar tudo pelo
 repositório.
 
+## Pré-requisitos
+
+- Node
+- clasp
+
 ## Comandos disponíveis
 
 ### Limpeza
@@ -57,8 +62,26 @@ npm install
 ```shell
 npm run login
 ```
+4. Crie os arquivos de configuração necessários:
 
-4. Construa o projeto:
+Após o login, você precisa configurar o Clasp para o seu projeto. Isso criará o arquivo .clasp.json. Se você ainda não tem um projeto configurado, use:
+
+```shell
+clasp create --type standalone --title "Nome do seu projeto"
+```
+
+Você também precisará de um arquivo `appsscript.json` no diretório `/dist`. Crie este arquivo manualmente ou copie o mesmo gerado na `/src` com o comando anterior com a seguinte estrutura mínima:
+
+```json
+{
+  "timeZone": "America/Sao_Paulo",
+  "dependencies": {},
+  "exceptionLogging": "STACKDRIVER"
+}
+
+```
+
+5.  Construa o projeto:
 
 ```shell
 npm run build
@@ -114,7 +137,7 @@ Sinta-se livre para utilizar a arquitetura que desejar. Quando o comando build f
 ```shell
 src/
 ├── main.ts
-├── MyClass.ts
+├── Entities/MyClass.ts
 └── ...
 
 ```
