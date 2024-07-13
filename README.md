@@ -70,6 +70,14 @@ Após o login, você precisa configurar o Clasp para o seu projeto. Isso criará
 clasp create --type standalone --title "Nome do seu projeto"
 ```
 
+Caso já possua um código, execute o comando abaixo dentro da pasta `dist`.
+
+```shell
+clasp clone <your-script-id>
+```
+
+Após isso mova o arquivo .clasp.json para a raiz do projeto.
+
 Você também precisará de um arquivo `appsscript.json` no diretório `/dist`. Crie este arquivo manualmente ou copie o mesmo gerado na `/src` com o comando anterior com a seguinte estrutura mínima:
 
 ```json
